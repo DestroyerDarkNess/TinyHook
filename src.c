@@ -52,7 +52,7 @@ int WINAPI hookMessageBox(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, UINT uType
     // Restore the hook code
     BYTE* src = (BYTE*)pMessageBoxOrig;
     BYTE* dest = (BYTE*)hookMessageBox;
-    DetourFunc(src, dest, 5);  // Reaplica el gancho
+    DetourFunc(src, dest, 5);  // Reapply the hook
 
     // Call the original MessageBox function
     return result;
